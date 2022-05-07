@@ -1,0 +1,306 @@
+:root {
+    --darkblue-color: #0A3871;
+    --lightgray-color: #495057;
+    --darkgray-color: #343A40;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: .5rem 1rem;
+    background-color: var(--darkblue-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-titulo-principal {
+    display: inline-block;
+    margin: 0 auto;
+    flex: 0 0 90%;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+textarea {
+    display: block;
+    width: 95%;
+    height: 40vh;
+    resize: none;
+    margin: 1rem auto;
+    padding: .3rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #edf5ff;
+    outline: none;
+    box-shadow: 0 0 .2rem .0001rem #b2b2b2;
+}
+
+textarea:focus {
+    box-shadow: 0 0 .4rem .1rem #8f8f8f;
+}
+
+#ingreso-texto::placeholder {
+    color: var(--darkblue-color);
+}
+
+.container-sugerencia {
+    display: flex;
+    align-items: center;
+    padding-left: 2.5%;
+}
+
+.container-sugerencia p {
+    padding-left: .5rem;
+    color: var(--lightgray-color);
+    font-size: .8rem;
+}
+
+.container-botones {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.boton {
+    width: 95%;
+    margin: .8rem auto;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    cursor: pointer;
+}
+
+.encriptar {
+    background-color: var(--darkblue-color);
+    color: #ffffff;
+    border: thin solid var(--darkblue-color);
+    font-weight: bold;
+}
+
+.desencriptar {
+    background-color: #ffffff;
+    color: var(--darkblue-color);
+    border: thin solid var(--darkblue-color);
+    font-weight: bold;
+}
+
+.container-salida {
+    position: relative;
+}
+
+.container-texto-salida {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 5vh;
+    left: 5%;
+    right: 5%;
+    bottom: 5vh;
+}
+
+.muneco {
+    display: none;
+}
+
+.titulo-salida {
+    color: var(--darkgray-color);
+    padding: 0 2rem;
+    font-size: 1.3rem;
+}
+
+.parrafo-salida {
+    color: var(--lightgray-color);
+    padding: 1rem 3.5rem;
+    font-size: 1.1rem;
+}
+
+#salida-texto:focus {
+    outline: none;
+}
+
+.boton-copiar {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+    cursor: pointer;
+    display: none;
+}
+
+.boton-copiar img {
+    width: 2rem;
+}
+
+#copiado {
+    position: absolute;
+    right: calc(6% + 2rem);
+    bottom: 6%;
+    color: var(--lightgray-color);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--darkblue-color);
+    color: #ffffff;
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.enlace {
+    padding: .25rem;
+}
+
+.enlace a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ======================================================================= */
+/* Modo tablet */
+/* ======================================================================= */
+
+@media screen and (min-width:768px) {
+
+    header {
+        justify-content: flex-start;
+    }
+
+    #ingreso-texto {
+        height: 50vh;
+    }
+
+    #salida-texto {
+        height: auto;
+    }
+
+    .enlace {
+        display: inline-block;
+    }
+}
+
+/* ======================================================================= */
+/* Modo escritorio */
+/* ======================================================================= */
+
+@media screen and (min-width:1024px) {
+
+    body {
+        height: 100vh;
+    }
+
+    form {
+        display: flex;
+        height: calc(100vh - 9.3rem);
+    }
+
+    .flex-mayor {
+        flex: 0 0 70%;
+    }
+
+    #ingreso-texto {
+        width: 95%;
+        height: calc(100vh - 17.4rem);
+    }
+
+    #ingreso-texto::placeholder {
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    .container-sugerencia {
+        margin: .5rem 0;
+    }
+
+    .container-botones {
+        flex-flow: row;
+    }
+
+    .boton {
+        width: 40%;
+    }
+
+    .flex-menor {
+        flex: 0 0 30%;
+    }
+
+    #salida-texto {
+        width: 95%;
+        height: 100%;
+        margin-right: 5%;
+    }
+
+    .boton-copiar {
+        right: 10%;
+        bottom: 0;
+    }
+
+    .muneco {
+        display: block;
+    }
+
+    #copiado {
+        position: absolute;
+        right: calc(12% + 2rem);
+        bottom: 2%;
+        color: var(--lightgray-color);
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .enlace {
+        display: inline;
+    }
+}
+
+/* ======================================================================= */
+/* Clases agregadas */
+/* ======================================================================= */
+
+.valido {
+    border: thin solid #31fb31;
+}
+
+.invalido {
+    border: thin solid #ff3a3a;
+}
+
+.invalido-letra {
+    color: #ff3a3a !important;
+}
+
+.ocultar {
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}
+
+.seleccion-desactivada::selection {
+    background-color: transparent;
+}
