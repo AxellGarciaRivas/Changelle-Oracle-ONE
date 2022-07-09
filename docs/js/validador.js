@@ -20,7 +20,7 @@ function validarTexto() {
     } else {
         agregarClase(borde, "invalido")
         agregarClase(sugerenciaCambio, "invalido-letra");
-        modificarMensaje(sugerenciaCambio, "Lo sentimos, no puedes ingresar letras mayusculas, con acento, caracteres especiales o sin texto");
+        modificarMensaje(sugerenciaCambio, "Lo sentimos, no puedes ingresar letras mayusculas, con acento, caracteres especiales, sin texto o espacio al principio");
         validoEncriptar = false;
     }
 }
