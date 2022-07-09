@@ -11,7 +11,7 @@ ingresoTexto.addEventListener("keyup", validarTexto);
 
 function validarTexto() {
 
-    if (expresion.test(ingresoTexto.value.trim())) {
+    if (expresion.test(ingresoTexto.value)) {
         agregarClase(borde, "valido");
         eliminarClase(borde, "invalido");
         eliminarClase(sugerenciaCambio, "invalido-letra");
@@ -43,7 +43,7 @@ botonEncriptar.addEventListener("click", function (e) {
         encriptar(mensajeEncriptar);
 
         if (resultadoEncriptado !== "") {
-            modificarMensaje(salidaTexto, resultadoEncriptado.trim());
+            modificarMensaje(salidaTexto, resultadoEncriptado);
             agregarClase(tituloSalida, "ocultar");
             agregarClase(parrafoSalida, "ocultar");
             agregarClase(muneco, "ocultar");
@@ -67,7 +67,7 @@ botonDesencriptar.addEventListener("click", function (e) {
         desencriptar(mensajeDesencriptar);
 
         if (resultadoDesencriptado !== "") {
-            modificarMensaje(salidaTexto, resultadoDesencriptado.trim());
+            modificarMensaje(salidaTexto, resultadoDesencriptado);
             agregarClase(tituloSalida, "ocultar");
             agregarClase(parrafoSalida, "ocultar");
             agregarClase(muneco, "ocultar");
