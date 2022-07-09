@@ -43,7 +43,7 @@ botonEncriptar.addEventListener("click", function (e) {
         encriptar(mensajeEncriptar);
 
         if (resultadoEncriptado !== "") {
-            modificarMensaje(salidaTexto, resultadoEncriptado.trim();
+            modificarMensaje(salidaTexto, resultadoEncriptado.trim());
             agregarClase(tituloSalida, "ocultar");
             agregarClase(parrafoSalida, "ocultar");
             agregarClase(muneco, "ocultar");
